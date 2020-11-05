@@ -4,6 +4,8 @@
 namespace Sonar200\Template\Collection;
 
 
+use Sonar200\Collection\Collection;
+
 /**
  * Class StyleCollection
  *
