@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Sonar200\Template;
+namespace Sonar200\Template\Collection;
 
 
 /**
@@ -16,6 +16,7 @@ namespace Sonar200\Template;
  * @method Style|false current()
  * @method Style|false first()
  * @method Style|false last()
+ * @method Script[] list()
  */
 class StyleCollection extends Collection
 {

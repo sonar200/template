@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Sonar200\Template;
+namespace Sonar200\Template\Collection;
 
 
 use Ds\Vector;
@@ -15,8 +15,8 @@ use Iterator;
  */
 class Collection implements Iterator
 {
-    /** @var Collection */
-    protected static Collection $instances;
+    /** @var Collection[] */
+    protected static array $instances = [];
 
     protected Vector $vector;
     protected int $increment = 0;
@@ -116,14 +116,27 @@ class Collection implements Iterator
         return $this->vector->last();
     }
 
+    public function list()
+    {
+        $this->rewind();
+        $list = [];
+
+        while($item = $this->each()){
+            array_push($list, $item);
+        }
+        $this->rewind();
+
+        return $list;
+    }
+
     public static function getInstance()
     {
         $class = get_called_class();
 
-        if (empty(self::$instances)) {
-            self::$instances = new $class;
+        if (!isset(self::$instances[$class])) {
+            self::$instances[$class] = new $class;
         }
-        return self::$instances;
+        return self::$instances[$class];
     }
 
     protected function __clone()

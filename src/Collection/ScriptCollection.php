@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Sonar200\Template;
+namespace Sonar200\Template\Collection;
 
 
 /**
@@ -16,6 +16,7 @@ namespace Sonar200\Template;
  * @method Script|false current()
  * @method Script|false first()
  * @method Script|false last()
+ * @method Script[] list()
  */
 class ScriptCollection extends Collection
 {

@@ -5,7 +5,7 @@
     "keywords": ["php", "template"],
     "homepage": "https://github.com/sonar200/template",
     "license": "MIT",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "authors": [
         {
             "name": "Ivan Ivanov",
@@ -15,9 +15,6 @@
     "require": {
         "php": ">=7.4",
         "php-ds/php-ds": "v1.3.0"
-    },
-    "config": {
-        "bin-dir": "vendor/bin"
     },
     "autoload": {
         "psr-4": {
