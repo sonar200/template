@@ -4,7 +4,7 @@
 namespace Sonar200\Template\Collection;
 
 
-use Sonar200\Collection\Collection;
+use Sonar200\Collection\CollectionSingleton;
 
 /**
  * Class StyleCollection
@@ -20,7 +20,7 @@ use Sonar200\Collection\Collection;
  * @method Script|false last()
  * @method Script[] list()
  */
-class ScriptCollection extends Collection
+class ScriptCollection extends CollectionSingleton
 {
     /**
      * @param mixed $script
