@@ -11,14 +11,8 @@ use Sonar200\Collection\CollectionSingleton;
  *
  * @package Core\Base\Template
  *
- * @method static StyleCollection getInstance()
  * @method Style|false next()
- * @method Style|false prev()
- * @method Style|false each()
  * @method Style|false current()
- * @method Style|false first()
- * @method Style|false last()
- * @method Script[] list()
  */
 class StyleCollection extends CollectionSingleton
 {
