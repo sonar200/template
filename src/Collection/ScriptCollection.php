@@ -17,10 +17,10 @@ use Sonar200\Collection\CollectionSingleton;
 class ScriptCollection extends CollectionSingleton
 {
     /**
-     * @param mixed $script
+     * @param mixed $value
      */
-    public function add($script)
+    public function add($value)
     {
-        parent::add(new Script($script));
+        parent::add(new Script($value));
     }
 }

@@ -13,19 +13,19 @@ class Template
 {
 
     /** @var Template */
-    protected static Template $instances;
+    protected static $instances;
 
     /** @var string Папка для основных шаблонов страницы */
     const LAYOUT_FOLDER = '/layouts';
 
     /** @var string основной шаблон странциы */
-    private static string $layout = 'main';
+    private static $layout = 'main';
 
     /** @var string Путь к файлам шаблона */
-    private static string $templatePath;
+    private static $templatePath;
 
     /** @var array Параметры для основного шаблона */
-    private static array $layoutParams = [];
+    private static $layoutParams = [];
 
     /**
      * Получение собраного шаблона
@@ -64,7 +64,7 @@ class Template
         $data['content'] = $content;
         $data['title'] = !empty($title) ? $title : '';
 
-        array_merge($data, self::$layoutParams);
+        $data = array_merge($data, self::$layoutParams);
 
         $layout = !empty($layout) ? $layout : self::$layout;
         $file = self::getPathToTemplate(self::LAYOUT_FOLDER . '/' . $layout);

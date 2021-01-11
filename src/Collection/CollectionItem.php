@@ -9,7 +9,7 @@ abstract class CollectionItem
     /**
      * @var string
      */
-    protected string $link;
+    protected $link;
 
     /**
      * CollectionItemScript constructor.

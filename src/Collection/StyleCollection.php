@@ -17,11 +17,11 @@ use Sonar200\Collection\CollectionSingleton;
 class StyleCollection extends CollectionSingleton
 {
     /**
-     * @param mixed $style
+     * @param mixed $value
      */
-    public function add($style)
+    public function add($value)
     {
 
-        parent::add(new Style($style));
+        parent::add(new Style($value));
     }
 }
